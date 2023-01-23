@@ -6,21 +6,37 @@
         xmlns:local="clr-namespace:Neural_Network_Grams"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="Перевод граммов в килограммы" Height="450" Width="800">
+        Title="Перевод граммов в килограммы" Height="698.967" Width="717.727">
     <Grid Background="#ffdadada">
         <Border MinWidth="400" Margin="15" Background="white" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0" />
             </Border.Effect>
             <StackPanel>
-                <TextBlock Text="Перевод граммов в килограммы" FontSize="30" FontWeight="Bold" Margin="0 0 0 0" />
-                <TextBox materialDesign:HintAssist.Hint="Введите граммы" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 0 0 10" />
-                <Grid Margin="0 0 0 0">
-                    <Button Content="Перевести граммы в килограммы" HorizontalAlignment="Left" />
-                    <Grid Margin="0 0 80 0" HorizontalAlignment="Right">
-                        <TextBlock Text="Килограммы:" FontSize="15" VerticalAlignment="Bottom"/>
-                        <TextBlock Text="0 кг" FontSize="15" VerticalAlignment="Bottom" Margin="103,0,-103,0" RenderTransformOrigin="0.359,0.471"/>
-                    </Grid>
+                <TextBlock Text="Перевод граммов в килограммы" FontSize="30" FontWeight="Bold"/>
+                <TextBox x:Name="TextBox1" materialDesign:HintAssist.Hint="Введите граммы" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 0 0 10" />
+                <Grid Margin="0 0 0 5">
+                    <Button Click="Button_Click1" Content="Перевести граммы в килограммы" HorizontalAlignment="Left" />
+                </Grid>
+                <Grid>
+                    <TextBlock Text="Килограммы:" FontSize="15" VerticalAlignment="Bottom"/>
+                    <TextBlock x:Name="TextBlock1" Text="0 кг" FontSize="15" VerticalAlignment="Bottom" Margin="103,0,-103,0" RenderTransformOrigin="0.359,0.471"/>
+                </Grid>
+                <TextBlock Text="Перевод килограммов в граммы" FontSize="30" FontWeight="Bold"/>
+                <TextBox x:Name="TextBox2" materialDesign:HintAssist.Hint="Введите килограммы" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 0 0 10" />
+                <Grid Margin="0 0 0 5">
+                    <Button Click="Button_Click2" Content="Перевести килограммы в граммы" HorizontalAlignment="Left" />
+                </Grid>
+                <Grid>
+                    <TextBlock Text="Граммы:" FontSize="15" VerticalAlignment="Bottom" Margin="-2,0,2,-4"/>
+                    <TextBlock x:Name="TextBlock2" Text="0 г" FontSize="15" VerticalAlignment="Bottom" Margin="67,0,-67,-4" RenderTransformOrigin="0.359,0.471"/>
+                </Grid>
+                <TextBlock Text="Обучение нейрона" FontSize="30" FontWeight="Bold"/>
+                <TextBox x:Name="TextBox3" materialDesign:HintAssist.Hint="Введите граммы" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox x:Name="TextBox4" materialDesign:HintAssist.Hint="Введите килограммы" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 0 0 10"/>
+                <Button Click="Button_Click3" Content="Обучить" Margin="0 0 0 5"/>
+                <Grid>
+                    <TextBlock x:Name="TextBlock3" Text="Нейрон не обучен" FontSize="15" VerticalAlignment="Bottom" Margin="179,0,178,0"/>
                 </Grid>
             </StackPanel>
         </Border>
